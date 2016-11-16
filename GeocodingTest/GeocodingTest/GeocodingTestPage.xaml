@@ -1,4 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:GeocodingTest" x:Class="GeocodingTest.GeocodingTestPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:GeocodingTest" x:Class="GeocodingTest.GeocodingTestPage" xmlns:maps="clr-namespace:Xamarin.Forms.Maps">
+	<StackLayout>
+		<Entry x:Name="Address" Placeholder="Address" />
+		<Entry x:Name="City" Placeholder="City"/>
+		<Entry x:Name="State" Placeholder="State"/>
+		<Button x:Name="DoGeoCode" Text="Geocode" Clicked="Handle_GeocodeClick"/>
+		<Label x:Name="Results"/>
+		<maps:Map x:Name="MapResult"/>
+	</StackLayout>
 </ContentPage>
